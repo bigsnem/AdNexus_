@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile - AdNexus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2 class="logo">🌍 AdNexus</h2>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+    </div>
+</nav>
+
+<div class="profile-card">
+
+    <img id="profileImage"
+         src="https://via.placeholder.com/150"
+         alt="Profile">
+
+    <h2 id="profileName">Guest User</h2>
+
+    <p id="profileEmail">No email</p>
+
+    <input type="file"
+           id="profilePhoto"
+           accept="image/*">
+
+    <br><br>
+
+    <button class="post-btn"
+            onclick="saveProfile()">
+
+        Save Profile
+
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

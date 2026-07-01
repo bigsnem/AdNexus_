@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AdNexus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2 class="logo">🌍 AdNexus</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#">Categories</a>
+            <a href="post-ad.html">Post Ad</a>
+            <a href="login.html">Login</a>
+
+            <button id="themeBtn" class="theme-btn" onclick="toggleTheme()">
+                              🌙 Dark Mode
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+
+        <h1>Buy & Sell Anything</h1>
+
+        <p><strong>Buy with Confidence. Sell with Trust.</strong></p>
+
+        <p>The global marketplace that protects both buyers and sellers.</p>
+
+        <button class="post-btn" onclick="welcomeMessage()">
+            Post Your First Ad
+        </button>
+
+    </div>
+
+    <!-- Search -->
+    <div class="search-area">
+
+       <input
+    type="text"
+    id="searchBox"
+    placeholder="Search cars, phones, houses..."
+    onkeyup="showAllAds()">
+
+        <button class="search-btn" onclick="searchAd()">
+            🔍 Search
+        </button>
+
+    </div>
+<div class="card" onclick="showAllAds()">
+             🌍 All Categories
+</div>
+    <!-- Categories -->
+    <div class="categories">
+
+       <div class="card" onclick="filterCategory('vehicles')">
+🚗 Vehicles
+</div>
+       <div class="card" onclick="filterCategory('phones')">
+📱 Phones & Tablets
+</div>
+        <div class="card" onclick="filterCategory('houses')">
+🏠 Houses
+</div>
+        <div class="card" onclick="filterCategory('jobs')">
+💼 Jobs
+</div>
+        <div class="card" onclick="filterCategory('pets')">
+🐶 Pets
+</div>
+        <div class="card" onclick="filterCategory('fashion')">
+👕 Fashion
+</div>
+
+    </div>
+
+    <!-- Featured Ads -->
+    <h2>⭐ Featured Ads</h2>
+
+<div class="featured-ad ad-card" data-category="phones">
+... </div>
+
+        <img src="images/home.jpg" alt="iPhone 15 Pro">
+
+        <h3 class="ad-title">iPhone 15 Pro</h3>
+
+        <p><strong>Price:</strong> $880</p>
+
+        <p><strong>Location:</strong> Florida</p>
+
+        <button class="post-btn" onclick="window.location.href='ad-details.html'">
+            View Details
+        </button>
+
+    </div>
+
+    <div class="featured-ad ad-card" data-category="houses">
+... </div>
+        <span class="badge">⭐ Featured</span>
+
+        <img src="images/home.jpg" alt="4-Bedroom Apartment">
+
+        <h3 class="ad-title">4-Bedroom Apartment</h3>
+
+        <p><strong>Price:</strong> $329,900</p>
+
+        <p><strong>Location:</strong> Florida</p>
+
+        <button class="post-btn" onclick="window.location.href='ad-details.html'">
+            View Details
+        </button>
+
+    </div>
+
+   <div class="featured-ad ad-card" data-category="electronics">... </div>
+        <img src="https://via.placeholder.com/300x200" alt="Laptop">
+
+        <h3 class="ad-title">Laptop</h3>
+
+        <p><strong>Price:</strong> $329</p>
+
+        <p><strong>Location:</strong> Florida</p>
+
+        <button class="post-btn" onclick="saveAd(this)">
+            ❤️ Save Ad
+        </button>
+
+    </div>
+
+   <div class="featured-ad ad-card" data-category="vehicles">
+... </div>
+        <img src="https://via.placeholder.com/300x200" alt="Toyota Corolla">
+
+        <h3 class="ad-title">Toyota Corolla</h3>
+
+        <p><strong>Price:</strong> $3500</p>
+
+        <p><strong>Location:</strong> Florida</p>
+
+        <button class="post-btn" onclick="saveAd(this)">
+            ❤️ Save Ad
+        </button>
+
+    </div>
+
+    <!-- User Ads -->
+    <section class="about">
+
+        <h2>🆕 Newly Posted Ads</h2>
+
+        <div id="userAds"></div>
+
+        <h2>About AdNexus</h2>
+
+        <p>
+            AdNexus is a global online marketplace where people can buy and sell
+            cars, houses, phones, electronics, jobs, fashion, and much more.
+            Our mission is to connect buyers and sellers safely and easily.
+        </p>
+
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why">
+
+        <h2>Why Choose AdNexus?</h2>
+
+        <ul>
+            <li>✅ Easy to use</li>
+            <li>🔒 Safe and secure</li>
+            <li>🌍 Worldwide marketplace</li>
+        </ul>
+
+    </section>
+
+    <br><br>
+
+    <button class="post-btn" onclick="welcomeMessage()">
+        Post Ad
+    </button>
+
+    <button class="login-btn" onclick="window.location.href='login.html'">
+        Login / Signup
+    </button>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>🌍 AdNexus</h3>
+
+        <p>Buy with Confidence. Sell with Trust.</p>
+
+        <p>© 2026 AdNexus. All Rights Reserved.</p>
+
+    </footer>
+
+    <script type="module" src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
+<a href="dashboard.html">Dashboard</a>
+<a href="saved-ads.html">❤️ Saved Ads</a>
+<a href="profile.html">👤 Profile</a>

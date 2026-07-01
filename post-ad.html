@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post an Ad - AdNexus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Post Your Ad</h1>
+
+<p>Fill in the details below.</p>
+
+<form>
+
+<input type="text" id="adTitle" placeholder="Ad Title" required>
+
+<br><br>
+
+<select required>
+    <option value="">Select Category</option>
+    <option>Cars</option>
+    <option>Phones</option>
+    <option>Houses</option>
+    <option>Jobs</option>
+    <option>Electronics</option>
+    <option>Fashion</option>
+</select>
+
+<br><br>
+
+<input type="number" id="adPrice" placeholder="Price" required>
+
+<br><br>
+
+<input type="text" id="adLocation" placeholder="Location" required>
+<br><br>
+
+<input type="text" placeholder="Seller Name" required>
+
+<br><br>
+
+<input type="email" placeholder="Email Address" required>
+
+<br><br>
+
+<textarea id="adDescription" placeholder="Describe your item" required></textarea>
+
+<br><br>
+
+<input     type="file"     id="adImage"     accept="image/*">
+
+<br><br>
+
+<button type="button" class="post-btn" onclick="submitAd()">
+    Submit Ad
+</button>
+
+</form>
+
+<br><br>
+
+<button class="login-btn" onclick="goHome()">
+    ← Back to Home
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
